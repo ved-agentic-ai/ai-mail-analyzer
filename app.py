@@ -1804,3 +1804,15 @@ else:
         """,
         unsafe_allow_html=True,
     )
+
+# Yeh function Vercel ko bataega ki request aane par kya response bhejna hai
+def handler(request):
+    # Aapka main functional code jo aap run karna chahte hain, use yahan call kar sakte hain
+    # Jaise: main_run_function()
+    return {
+        "statusCode": 200,
+        "body": "Mail Analyzer is running successfully!"
+    }
+
+# Vercel ko global level par 'app' variable chahiye, jo humne handler ko assign kar diya
+app = handler
