@@ -29,6 +29,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 
 # ── Load credentials ──────────────────────────────────────────────────────────
+load_dotenv(".env.local")
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 GMAIL_ADDRESS = os.getenv("GMAIL_SENDER_ADDRESS", "")
